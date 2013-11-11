@@ -3,7 +3,7 @@ paccoin a project based on blehcoin, a SHA256D based coin with Proof of Stake.
 It is the official currency of the future nation called Pacifica. Although many libertarian (freedom) minded 
 individuals have spoken about forming a new nation that is based on libertarian principles, no one has succeeded 
 in doing so until now. Pacifica is a nation based on the Kingdom of God, which will one day rule the world under 
-the returning King Jesus. We belive that that only true freedom for people on earth will be based on a theocracy 
+the returning King Jesus. We believe that the only true freedom for people on earth will be based on a theocracy 
 where Jesus is King.
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
