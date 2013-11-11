@@ -12,30 +12,47 @@ Currently only supporting linux machines.
 
 Installation Instructions: Linux/Unix
 
-Install the following dependencies using your terminal program:
+1. Install the following dependencies using your terminal program:
 
 sudo apt-get install build-essential libssl-dev libdb4.8-dev libboost-all-dev libminiupnpc-dev<br>
 sudo apt-get install libdb++-dev libqrencode-dev qt3-dev-tools qt4-qmake libqt4-dev
 
-Download the paccoin repository
+2. Download the paccoin repository
 
 cd ~<br>
 git clone https://github.com/wmcorless/paccoin.git paccoin
 
-This will create a directory called "paccoin" and copy the files into it. Next we're going to compile the programs.
+This will create a directory called "paccoin" and copy the files into it. 
+
+3. Next we're going to compile the programs.
 
 cd paccoin/src<br>
 make -f makefile.unix
 
-If all goes well you will have a file called paccoind. Run this by using the following command.
+If all goes well you will have a file called paccoind. 
+
+4. Run this by using the following command.
 
 ./paccoind
 
-The file should end and state that an rpcuser and password needs to be added. By running this you have now created 
-a hidden directory located at ~/.paccoin Edit the file paccoin.conf and change the rpcuser and rpcpassword for security 
-reasons. Copy the paccoin.conf file to this new hidden .paccoin directory.
+The file should end and state that an rpcuser and rpcpassword needs to be added. By running this you have now created 
+a hidden directory located at ~/.paccoin. 
 
-Now to make the executible qui file do the following:
+5. Enter that directory.
+
+cd ~/.paccoin
+
+6. Using a text editor create your file paccoin.conf and change the rpcuser and rpcpassword for security 
+reasons. 
+
+nano paccoin.conf
+
+rpcuser=yourname
+rpcpassword=yourpassword
+addnode=72.234.46.224
+server=0 # If you plan to solo-mine, change this to 1
+
+7. Now to make the executible qui file do the following:
 
 cd ~/paccoin<br>
 qmake paccoin-qt.pro<br>
