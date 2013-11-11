@@ -14,7 +14,7 @@ Currently only supporting linux machines.
 
 * Install the following dependencies using your terminal program:
 
-sudo apt-get install build-essential libssl-dev libdb4.8-dev libboost-all-dev libminiupnpc-dev<br>
+sudo apt-get install build-essential libssl-dev libboost-all-dev libminiupnpc-dev<br>
 sudo apt-get install libdb++-dev libqrencode-dev qt3-dev-tools qt4-qmake libqt4-dev
 
 * Download the paccoin repository
