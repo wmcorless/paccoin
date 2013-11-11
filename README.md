@@ -14,17 +14,17 @@ Installation Instructions: Linux/Unix
 
 Install the following dependencies using your terminal program:
 
-sudo apt-get install build-essential libssl-dev libdb4.8-dev libboost-all-dev libminiupnpc-dev
+sudo apt-get install build-essential libssl-dev libdb4.8-dev libboost-all-dev libminiupnpc-dev<br>
 sudo apt-get install libdb++-dev libqrencode-dev qt3-dev-tools qt4-qmake libqt4-dev
 
 Download the paccoin repository
 
-cd ~
+cd ~<br>
 git clone https://github.com/wmcorless/paccoin.git paccoin
 
 This will create a directory called "paccoin" and copy the files into it. Next we're going to compile the programs.
 
-cd paccoin/src
+cd paccoin/src<br>
 make -f makefile.unix
 
 If all goes well you will have a file called paccoind. Run this by using the following command.
@@ -37,8 +37,8 @@ reasons. Copy the paccoin.conf file to this new hidden .paccoin directory.
 
 Now to make the executible qui file do the following:
 
-cd ~/paccoin
-qmake paccoin-qt.pro
+cd ~/paccoin<br>
+qmake paccoin-qt.pro<br>
 make
 
 You should see the file paccoin-qt which you can execute by double clicking on it in file manager. This is your wallet 
