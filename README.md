@@ -1,44 +1,48 @@
-paccoin: a SHA256D version of 'foocoin'
+paccoin a project based on blehcoin, a SHA256D based coin with Proof of Stake.
 
+It is the official currency of the future nation called Pacifica. Although many libertarian (freedom) minded 
+individuals have spoken about forming a new nation that is based on libertarian principles, no one has succeeded 
+in doing so until now. Pacifica is a nation based on the concept of the Kingdom of God, which will one day rule 
+the world under the returning King Jesus. We belive that that only true freedom for people on earth will be based 
+on a theocracy where Jesus is King.
 
-Minimal Changes Needed: 
+Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
-Search/replace "paccoin" with your coin's name.
+Currently only supporting linux machines.
 
-Rename /src/paccoin* files to your coins name (i.e.: paccoinrpc.cpp to yourcoinrpc.cpp)
+Installation Instructions: Linux/Unix
 
-Rename /src/qt/paccoin* files to your coins name (i.e.: paccoingui.cpp to yourcoingui.cpp)
+Install the following dependencies using your terminal program:
 
-Replace/Rename /src/qt/res/icons/paccoin* files to your coins name (i.e.: paccoin.png to yourcoin.png)
+sudo apt-get install build-essential libssl-dev libdb4.8-dev libboost-all-dev libminiupnpc-dev
+sudo apt-get install libdb++-dev libqrencode-dev qt3-dev-tools qt4-qmake libqt4-dev
 
-Rename files in /src/qt/res/locale/paccoin* files to your coins name
+Download the paccoin repository
 
-Replace /src/qt/res/images/* with your own images.
+cd ~
+git clone https://github.com/wmcorless/paccoin.git paccoin
 
-Change RPC/P2P Ports in /src/protocol.h LINES 18-21
+This will create a directory called "paccoin" and copy the files into it. Next we're going to compile the programs.
 
-Change /src/main.cpp following lines:
+cd paccoin/src
+make -f makefile.unix
 
-LINE20: const bool IsCalculatingGenesisBlockHash = true; //(leave/set to true, set back to false afterward)
+If all goes well you will have a file called paccoind. Run this by using the following command.
 
-LINE48: const int64 nChainStartTime = 1376215269; //set to today's epoch
+./paccoind
 
-LINE949: int64 nSubsidy = 1 * COIN; //set your block rewards
+The file should end and state that an rpcuser and password needs to be added. By running this you have now created 
+a hidden directory located at ~/.paccoin Edit the file paccoin.conf and change the rpcuser and rpcpassword for security 
+reasons. Copy the paccoin.conf file to this new hidden .paccoin directory.
 
-LINE2547: const char* pszTimestamp = "paccoin - yea he did."; //set to your catchphrase
+Now to make the executible qui file do the following:
 
----------------------------------------------------------------------------------------------------------
+cd ~/paccoin
+qmake paccoin-qt.pro
+make
 
-Now, compile it like foocoin and run it. Debug.log will spit out a Merkel/GB/nNonce for you. 
+You should see the file paccoin-qt which you can execute by double clicking on it in file manager. This is your wallet 
+gui.
 
-Plug those values in here:
-
-/src/main.cpp LINE20: const bool IsCalculatingGenesisBlockHash = false;
-
-/src/main.cpp LINE 2565 block.nNonce   = 0;
-
-/src/main.cpp LINE 2597 assert(block.hashMerkleRoot == uint256("0x"));
-
-/src/main.h LINE 50 static const uint256 hashGenesisBlockOfficial("0x");
-
-Now recompile with the new .cpp and .h and your SHA256D coin is ready to go!
+It is also recommended that you change the passphrase to something you can remember. If you lose your passphrase 
+there is no way to get it back and you will lose any money in your wallet, so be careful.
