@@ -8,8 +8,6 @@ where Jesus is King.
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
-Currently only supporting linux machines.
-
 <h1>Installation Instructions: Linux/Unix</h1>
 
 * Install the following dependencies using your terminal program:
