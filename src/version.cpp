@@ -11,7 +11,7 @@
 const std::string CLIENT_NAME("paccoin");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-boc"
+#define CLIENT_VERSION_SUFFIX   "-PAC"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
@@ -36,7 +36,7 @@ const std::string CLIENT_NAME("paccoin");
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "99999"
+#    define GIT_COMMIT_ID "1"
 #    define GIT_COMMIT_DATE "$Format:%cD"
 #endif
 
@@ -56,7 +56,7 @@ const std::string CLIENT_NAME("paccoin");
 
 #ifndef BUILD_DATE
 #    ifdef GIT_COMMIT_DATE
-#        define BUILD_DATE "July 4, 2013"
+#        define BUILD_DATE "December 17, 2013"
 #    else
 #        define BUILD_DATE __DATE__ ", " __TIME__
 #    endif
