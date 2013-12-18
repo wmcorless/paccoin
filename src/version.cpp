@@ -11,7 +11,7 @@
 const std::string CLIENT_NAME("paccoin");
 
 // Client version number
-#define CLIENT_VERSION_SUFFIX   "-boc"
+#define CLIENT_VERSION_SUFFIX   "-PAC"
 
 
 // The following part of the code determines the CLIENT_BUILD variable.
