@@ -1,10 +1,8 @@
+version 0.1.4 beta
+
 paccoin a project based on blehcoin, a SHA256D based coin with Proof of Stake.
 
-It is the official currency of the future nation called Pacifica. Although many libertarian (freedom) minded 
-individuals have spoken about forming a new nation that is based on libertarian principles, no one has succeeded 
-in doing so until now. Pacifica is a nation based on the Kingdom of God, which will one day rule the world under 
-the returning King Jesus. We believe that the only true freedom for people on earth will be based on a theocracy 
-where Jesus is King.
+Paccoin is a digital currency that users can send or receive paccoins to one another on the internet without the need for banks. It is the official currency of the future nation called Pacifica. 
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
@@ -47,7 +45,13 @@ nano paccoin.conf
 
 rpcuser=yourname<br>
 rpcpassword=yourpassword<br>
-addnode=72.234.46.224
+addnode=72.234.204.139
+
+if you intend to solo mine use the following as an example:
+
+rpcallowip=192.168.1.* (for lan, or use a direct IP)
+server=1
+gen=0 (use 1 to generate coins (this will cause your computer to run at 100% cpu))
 
 Save this file. 
 
