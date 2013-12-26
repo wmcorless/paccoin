@@ -36,7 +36,7 @@ const std::string CLIENT_NAME("paccoin");
 // git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#    define GIT_COMMIT_ID "0"
+#    define GIT_COMMIT_ID "$Format:%h$"
 #    define GIT_COMMIT_DATE "$Format:%cD"
 #endif
 
@@ -56,7 +56,7 @@ const std::string CLIENT_NAME("paccoin");
 
 #ifndef BUILD_DATE
 #    ifdef GIT_COMMIT_DATE
-#        define BUILD_DATE "Dec. 25, 2013"
+#        define BUILD_DATE GIT_COMMIT_DATE
 #    else
 #        define BUILD_DATE __DATE__ ", " __TIME__
 #    endif
