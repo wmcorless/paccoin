@@ -3,8 +3,10 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
+#include "headers.h"
 #include "db.h"
 #include "net.h"
+#include "auxpow.h"
 #include "checkpoints.h"
 #include "util.h"
 #include "main.h"
@@ -845,6 +847,7 @@ bool CTxDB::LoadBlockIndexGuts()
             pindexNew->nTime          = diskindex.nTime;
             pindexNew->nBits          = diskindex.nBits;
             pindexNew->nNonce         = diskindex.nNonce;
+			pindexNew->auxpow         = diskindex.auxpow;
 
             // Watch for genesis block
             if (pindexGenesisBlock == NULL && diskindex.GetBlockHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet))
