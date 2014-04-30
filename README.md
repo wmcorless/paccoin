@@ -1,4 +1,6 @@
-version 0.1.4 beta
+version 0.1.4.0 Updated 4/29/14
+Added support to disable POS mining in paccoin.conf
+staking=0
 
 paccoin a project based on blehcoin, a SHA256D based coin with Proof of Stake.
 
