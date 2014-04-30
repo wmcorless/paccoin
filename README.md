@@ -8,6 +8,10 @@ Paccoin is a digital currency that users can send or receive paccoins to one ano
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
+<h1>Installation Instructions: Wiindows</h1>
+
+Use easywinbuilder in the "contrib" folder
+
 <h1>Installation Instructions: Ubuntu</h1>
 
 * Install the following dependencies using your terminal program:
@@ -49,7 +53,7 @@ nano paccoin.conf
 
 rpcuser=yourname<br>
 rpcpassword=yourpassword<br>
-addnode=72.234.204.139
+addnode=pacifica-nation.com
 
 if you intend to solo mine use the following as an example:
 
