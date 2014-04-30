@@ -24,10 +24,18 @@ typedef std::map<int, uint256> MapCheckpoints;
 //
 static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
-        ( 0, hashGenesisBlockOfficial )
+		( 0, hashGenesisBlockOfficial )
+        ( 44270, uint256("0x00000000004fd628693b2c71522f731955f7b70af8b180cb47ad062fb202659d"))
         ;
-
-
+    static const CCheckpointData data = {
+        &mapCheckpoints,
+		
+        1386974985, // * UNIX timestamp of last checkpoint block
+        56756,      // * total number of transactions between genesis and last checkpoint
+                    //   (the tx=... number in the SetBestChain debug.log lines)
+        60000.0     // * estimated number of transactions per day after checkpoint
+	};
+   
 static MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
         ( 0, hashGenesisBlockTestNet )
