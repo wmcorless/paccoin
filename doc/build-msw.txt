@@ -9,6 +9,8 @@ cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP
 software written by Thomas Bernard.
 
 
+Use easywinbuilder for compiling for windows in the "contrib" Directory
+
 See readme-qt.rst for instructions on building paccoin-QT, the
 graphical user interface.
 
