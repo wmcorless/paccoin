@@ -1,10 +1,10 @@
-Updated 4/29/14 - version 0.1.4.0 <br>
-Added support to disable POS mining in paccoin.conf<br>
+Updates:
+4/29/14 - version 0.1.4.0 upgraded to OpenSSL 1.01g 7 Apr 2014 to correct for Heartbleed vulnerability. Added support to disable POS mining in paccoin.conf<br>
 staking=0<br>
 
-paccoin a project based on blehcoin, a SHA256D based coin with Proof of Stake.
-
-Paccoin is a digital currency that users can send or receive paccoins to one another on the internet without the need for banks. It is the official currency of the future nation called Pacifica. 
+paccoin a crypto currency based on SHA256D with Proof of Work and Proof of Stake.
+ 
+Paccoin is a digital currency that allows users to send or receive paccoins to each other on the internet without the need for banks. It is the official currency of the future nation called Pacifica. 
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
@@ -62,6 +62,14 @@ server=1<br>
 gen=0 (use 1 to generate coins (this will cause your computer to run at 100% cpu))<br>
 
 Save this file. 
+
+* Compile your paccoin daemon file
+
+cd ~/paccoin/src<br>
+make -f makefile.unix
+
+This will make the paccoind application for running a headless paccoin.
+(rpc commands can be made from the terminal ie. ./paccoind help)
 
 * Now you're ready to compile and run your wallet.
 
