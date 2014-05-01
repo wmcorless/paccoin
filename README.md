@@ -1,6 +1,5 @@
 Updates:
-4/29/14 - version 0.1.4.0 upgraded to OpenSSL 1.01g 7 Apr 2014 to correct for Heartbleed vulnerability. Added support to disable POS mining in paccoin.conf<br>
-staking=0<br>
+4/29/14 - version 0.1.4.0 upgraded to OpenSSL 1.01g 7 Apr 2014 to correct for Heartbleed vulnerability. Added support to disable POS mining in paccoin.conf "staking=0". Also added contrib folder which includes easywinbuilder for building on windows based machines.
 
 paccoin a crypto currency based on SHA256D with Proof of Work and Proof of Stake.
  
@@ -33,7 +32,7 @@ This will create a directory called "paccoin-0.1.4.0" and copy the files into it
 cd paccoin/src<br>
 make -f makefile.unix
 
-If all goes well you will have a file called paccoind. 
+This will generate the headless paccoind file. (rpc commands can be made from the terminal ie. "./paccoind help")
 
 * Run this by using the following command.
 
@@ -62,14 +61,6 @@ server=1<br>
 gen=0 (use 1 to generate coins (this will cause your computer to run at 100% cpu))<br>
 
 Save this file. 
-
-* Compile your paccoin daemon file
-
-cd ~/paccoin/src<br>
-make -f makefile.unix
-
-This will make the paccoind application for running a headless paccoin.
-(rpc commands can be made from the terminal ie. ./paccoind help)
 
 * Now you're ready to compile and run your wallet.
 
