@@ -16,7 +16,8 @@ Use easywinbuilder in the "contrib" folder
 * Install the following dependencies using your terminal program:
 
 sudo apt-get install build-essential libssl-dev libboost-all-dev libminiupnpc-dev<br>
-sudo apt-get install libdb4.8++-dev libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev<br>
+sudo apt-get install libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev<br>
+sudo apt-get install libdb4.8++-dev<br>
 
 (Some versions of Ubuntu do not have libminiupnpc-dev available. You can download miniupnpc libraries here: http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.tar.gz) Use the instructions to install in doc section.
 
