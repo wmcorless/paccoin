@@ -19,6 +19,7 @@ sudo apt-get install build-essential libssl-dev libboost-all-dev libminiupnpc-de
 sudo apt-get install libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev<br>
 sudo apt-get install libdb4.8++-dev<br>
 
+If the previous doesn't work try libdb++-dev
 (Some versions of Ubuntu do not have libminiupnpc-dev available. You can download miniupnpc libraries here: http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.tar.gz) Use the instructions to install in doc section.
 
 * Download the paccoin repository
