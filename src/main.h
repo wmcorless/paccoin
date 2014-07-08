@@ -113,6 +113,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits);
 int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash);
 int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTime);
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
+unsigned int ComputeMinStake(unsigned int nBase, int64 nTime, unsigned int nBlockTime);
 int GetNumBlocksOfPeers();
 bool IsInitialBlockDownload();
 std::string GetWarnings(std::string strFor);
@@ -1237,14 +1238,16 @@ public:
         return (int64)nTime;
     }
 
-    CBigNum GetBlockTrust() const
-    {
-        CBigNum bnTarget;
-        bnTarget.SetCompact(nBits);
-        if (bnTarget <= 0)
-            return 0;
-        return (IsProofOfStake()? (CBigNum(1)<<256) / (bnTarget+1) : 1);
-    }
+//    CBigNum GetBlockTrust() const
+//    {
+//        CBigNum bnTarget;
+//        bnTarget.SetCompact(nBits);
+//        if (bnTarget <= 0)
+//            return 0;
+//        return (IsProofOfStake()? (CBigNum(1)<<256) / (bnTarget+1) : 1);
+//    }
+
+    CBigNum GetBlockTrust() const;
 
     bool IsInMainChain() const
     {
