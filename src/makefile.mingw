@@ -10,12 +10,12 @@ BOOST_SUFFIX?=-mgw46-mt-sd-1_54
 INCLUDEPATHS= \
  -I"/c/boost_1_54_0" \
  -I"/c/db-4.8.30.NC\build_unix" \
- -I"/c/openssl-1.0.1e\include"
+ -I"/c/openssl-1.0.1h\include"
 
 LIBPATHS= \
  -L"/c/boost_1_54_0\stage\lib" \
  -L"/c/db-4.8.30.NC\build_unix" \
- -L"/c/openssl-1.0.1e"
+ -L"/c/openssl-1.0.1h"
 
 LIBS= \
  -l boost_system-mgw46-mt-sd-1_54 \
