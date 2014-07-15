@@ -25,3 +25,7 @@ qrc_*.cpp
 #mac specific
 .DS_Store
 build
+doc/Thumbs.db
+share/pixmaps/Thumbs.db
+src/qt/res/icons/Thumbs.db
+src/qt/res/images/Thumbs.db

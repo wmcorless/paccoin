@@ -7,29 +7,29 @@ USE_IPV6:=1
 
 BOOST_SUFFIX?=-mgw46-mt-sd-1_54
 
-INCLUDEPATHS= \
+INCLUDEPATHS?= \
  -I"/c/boost_1_54_0" \
  -I"/c/db-4.8.30.NC\build_unix" \
  -I"/c/openssl-1.0.1h\include"
 
-LIBPATHS= \
+LIBPATHS?= \
  -L"/c/boost_1_54_0\stage\lib" \
  -L"/c/db-4.8.30.NC\build_unix" \
  -L"/c/openssl-1.0.1h"
 
 LIBS= \
- -l boost_system-mgw46-mt-sd-1_54 \
- -l boost_filesystem-mgw46-mt-sd-1_54 \
- -l boost_program_options-mgw46-mt-sd-1_54 \
- -l boost_thread-mgw46-mt-sd-1_54 \
- -l boost_chrono-mgw46-mt-sd-1_54 \
+ -l boost_system-mgw46-mt-1_54 \
+ -l boost_filesystem-mgw46-mt-1_54 \
+ -l boost_program_options-mgw46-mt-1_54 \
+ -l boost_thread-mgw46-mt-1_54 \
+ -l boost_chrono-mgw46-mt-1_54 \
  -l db_cxx \
  -l ssl \
  -l crypto
 
-DEFS=-DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
+DEFS=-D_MT -DWIN32 -DWIN32_LEAN_AND_MEAN -D_WINDOWS -DBOOST_THREAD_USE_LIB -DBOOST_SPIRIT_THREADSAFE
 DEBUGFLAGS=-g
-CFLAGS=-mthreads -O2 -msse2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
+CFLAGS=${ADDITIONALCCFLAGS} -mthreads -O2 -msse2 -w -Wall -Wextra -Wformat -Wformat-security -Wno-unused-parameter $(DEBUGFLAGS) $(DEFS) $(INCLUDEPATHS)
 LDFLAGS=-Wl,--dynamicbase -Wl,--nxcompat
 
 TESTDEFS = -DTEST_DATA_DIR=$(abspath test/data)
@@ -48,7 +48,7 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-LIBS += -l kernel32 -l user32 -l gdi32 -l comdlg32 -l winspool -l winmm -l shell32 -l comctl32 -l ole32 -l oleaut32 -l uuid -l rpcrt4 -l advapi32 -l ws2_32 -l mswsock -l shlwapi
+LIBS +=  -l mingwthrd -l kernel32 -l user32 -l gdi32 -l comdlg32 -l winspool -l winmm -l shell32 -l comctl32 -l ole32 -l oleaut32 -l uuid -l rpcrt4 -l advapi32 -l ws2_32 -l mswsock -l shlwapi
 
 # TODO: make the mingw builds smarter about dependencies, like the linux/osx builds are
 HEADERS = $(wildcard *.h)
