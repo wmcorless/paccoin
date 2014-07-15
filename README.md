@@ -1,4 +1,5 @@
 Updates:<br>
+7/15/14 - Upgraded Protocol to 60007 and version upgrade to v 0.1.4.3. This disconnects old clients to avoid Stake Forking problem that was fixed in previous version, but still vulnerable to old clients forking.
 7/12/14 - Fixed Stake forking problem. Please update your client to version 0.1.4.2<br>
 4/29/14 - version 0.1.4.0 upgraded to OpenSSL 1.01g 7 Apr 2014 to correct for Heartbleed vulnerability. Added support to disable POS mining in paccoin.conf "staking=0". Also added contrib folder which includes easywinbuilder for building on windows based machines.<br>
 
