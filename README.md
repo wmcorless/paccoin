@@ -1,4 +1,5 @@
 Updates:<br>
+4/5/17 - Upgraded openssl and added checkpoints.
 7/15/14 - Upgraded Protocol to 60007 and version upgrade to v 0.1.4.3. This disconnects old clients to avoid Stake Forking problem that was fixed in previous version, but still vulnerable to old clients forking.<br>
 7/12/14 - Fixed Stake forking problem. Please update your client to version 0.1.4.2<br>
 4/29/14 - version 0.1.4.0 upgraded to OpenSSL 1.01g 7 Apr 2014 to correct for Heartbleed vulnerability. Added support to disable POS mining in paccoin.conf "staking=0". Also added contrib folder which includes easywinbuilder for building on windows based machines.<br>
@@ -27,9 +28,9 @@ If the previous doesn't work try libdb++-dev
 * Download the paccoin repository
 
 cd ~<br>
-git clone https://github.com/wmcorless/paccoin.git paccoin-0.1.4.0
+git clone https://github.com/wmcorless/paccoin.git paccoin-1.5.0
 
-This will create a directory called "paccoin-0.1.4.0" and copy the files into it. 
+This will create a directory called "paccoin-0.1.5.0" and copy the files into it. 
 
 * Next we're going to compile the programs.
 
