@@ -10,11 +10,11 @@ Paccoin is a digital currency that allows users to send or receive paccoins to e
 
 Official Website for Paccoin is www.pacifica-nation.com/paccoin
 
-<h1>Installation Instructions: Wiindows</h1>
+<h1>Installation Instructions: Windows</h1>
 
 Use easywinbuilder in the "contrib" folder
 
-<h1>Installation Instructions: Ubuntu</h1>
+<h1>Installation Instructions: Ubuntu 14.04</h1>
 
 * Install the following dependencies using your terminal program:
 
@@ -22,15 +22,15 @@ sudo apt-get install build-essential libssl-dev libboost-all-dev libminiupnpc-de
 sudo apt-get install libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev<br>
 sudo apt-get install libdb4.8++-dev<br>
 
-If the previous doesn't work try libdb++-dev
+For 16.04 use libdb++-dev
 (Some versions of Ubuntu do not have libminiupnpc-dev available. You can download miniupnpc libraries here: http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.8.tar.gz) Use the instructions to install in doc section.
 
 * Download the paccoin repository
 
 cd ~<br>
-git clone https://github.com/wmcorless/paccoin.git paccoin-1.5.0
+git clone https://github.com/wmcorless/paccoin.git paccoin
 
-This will create a directory called "paccoin-0.1.5.0" and copy the files into it. 
+This will create a directory called "paccoin" and copy the files into it. 
 
 * Next we're going to compile the programs.
 
