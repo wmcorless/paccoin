@@ -18,8 +18,9 @@ Use easywinbuilder in the "contrib" folder
 
 * Install the following dependencies using your terminal program:
 
+apt-get update<br>
 sudo apt-get install build-essential libssl-dev libboost-all-dev libminiupnpc-dev<br>
-sudo apt-get install libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev<br>
+sudo apt-get install libqrencode-dev qt4-dev-tools qt4-qmake libqt4-dev git<br>
 sudo apt-get install libdb4.8++-dev<br>
 
 For 16.04 use libdb++-dev
