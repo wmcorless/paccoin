@@ -2044,7 +2044,7 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos)
         return false;
 
     // New best
-    if (pindexNew->bnChainTrust > bnBestChainTrust)
+    if (pindexNew->bnChainTrust > bnBestChainTrust && pindexNew->nHeight > nBestHeight)
         if (!SetBestChain(txdb, pindexNew))
             return false;
 
