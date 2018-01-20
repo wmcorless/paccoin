@@ -1,9 +1,9 @@
 # Development Announcement:
-For any technical questions please contact us by sending email to devteam@paccoin.net
+For any technical questions please contact us by sending email to admin@paccoinofficial.com
 We are also looking for volunteers to help with Android and IOS wallet development, as well as experienced Blockchain developers that would like to help continue making Paccoin great - feel free to drop us a message to the email provided above.
 
 General Information:
-Please go to www.paccoin.net to find more information about paccoin
+Please go to www.paccoinofficial.com to find more information about paccoin
 
 ## Updates:
 * ***11/17/17*** - Version 0.1.5.1. Updated image assets according to new branding. 
@@ -14,9 +14,9 @@ Please go to www.paccoin.net to find more information about paccoin
 
 paccoin a crypto currency based on SHA256D with Proof of Work and Proof of Stake.
  
-Paccoin is the “Peoples Alternative Choice” digital currency that allows users to send or receive paccoins to each other on the internet without the need for banks.
+Paccoin is a digital currency that allows users to send or receive paccoins to each other on the internet without the need for banks.
 
-Official Website for Paccoin is http://paccoin.net/
+Official Website for Paccoin is http://paccoinofficial.com/
 
 ## Installation Instructions: Windows
 
@@ -40,7 +40,7 @@ For 16.04 use `libdb++-dev`
 
 ```
 cd ~
-git clone https://github.com/PaccoinCommunity/Paccoin.git paccoin
+git clone https://github.com/wmcorless/paccoin.git paccoin
 
 This will create a directory called "paccoin" and copy the files into it. 
 ```
