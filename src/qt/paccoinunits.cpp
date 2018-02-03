@@ -67,9 +67,9 @@ int paccoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8; // 21,000,000 (# digits, without commas)
-    case mBTC: return 11; // 21,000,000,000
-    case uBTC: return 14; // 21,000,000,000,000
+    case BTC: return 10; // 100 Billion (# digits, without commas)
+    case mBTC: return 13; // Adding 2 more decimal places
+    case uBTC: return 16; // 
     default: return 0;
     }
 }
