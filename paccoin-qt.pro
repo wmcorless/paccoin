@@ -7,10 +7,10 @@ CONFIG += no_include_pwd
 
 #uncomment the following section to enable building on windows:
 #windows:LIBS += -lshlwapi
-#LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+#LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) #$$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
 #LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 #windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
-#LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 -lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
+#LIBS += -lboost_system-mgw46-mt-sd-1_53 -lboost_filesystem-mgw46-mt-sd-1_53 #-lboost_program_options-mgw46-mt-sd-1_53 -lboost_thread-mgw46-mt-sd-1_53
 #BOOST_LIB_SUFFIX=-mgw46-mt-sd-1_53
 #BOOST_INCLUDE_PATH=C:/deps/boost
 #BOOST_LIB_PATH=C:/deps/boost/stage/lib
@@ -39,14 +39,14 @@ contains(RELEASE, 1) {
 !win32 {
 # for extra security against potential buffer overflows: enable GCCs Stack Smashing Protection
 QMAKE_CXXFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
-QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1
+QMAKE_LFLAGS *= -fstack-protector-all --param ssp-buffer-size=1 
 # We need to exclude this for Windows cross compile with MinGW 4.2.x, as it will result in a non-working executable!
 # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
 }
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
-win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
+win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat += -lpthread
 
-# use: qmake "USE_QRCODE=1"
+ use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
 contains(USE_QRCODE, 1) {
     message(Building with QRCode support)
@@ -54,7 +54,7 @@ contains(USE_QRCODE, 1) {
     LIBS += -lqrencode -lpthread
 }
 
-# use: qmake "USE_UPNP=1" ( enabled by default; default)
+ use: qmake "USE_UPNP=1" ( enabled by default; default)
 #  or: qmake "USE_UPNP=0" (disabled by default)
 #  or: qmake "USE_UPNP=-" (not supported)
 # miniupnpc (http://miniupnp.free.fr/files/) must be installed for support
