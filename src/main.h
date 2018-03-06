@@ -33,7 +33,7 @@ static const int64 MIN_TX_FEE = 0.0001 * COIN;
 static const int64 MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64 MAX_MONEY = 1000000000000 * COIN;//1 Trillion
 static const int64 MAX_MINT_PROOF_OF_WORK = 500 * COIN;	//500 Coins per block
-static const int64 MAX_MINT_PROOF_OF_STAKE = 0.05 * MAX_MINT_PROOF_OF_WORK;	//
+static const int64 MAX_MINT_PROOF_OF_STAKE = 0.001 * MAX_MINT_PROOF_OF_WORK;	//
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 static const unsigned int MAX_TX_COMMENT_LEN = 268; // paccoin: 256 bytes + 12 little extra
 
