@@ -1,3 +1,5 @@
+# This coin is being deprecated. For New Paccoin info go to http://paccoin.net
+
 # Development Announcement:
 For any technical questions please contact us by sending email to admin@paccoinofficial.com
 We are also looking for volunteers to help with Android and IOS wallet development, as well as experienced Blockchain developers that would like to help continue making Paccoin great - feel free to drop us a message to the email provided above.
